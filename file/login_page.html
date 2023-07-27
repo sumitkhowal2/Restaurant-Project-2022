@@ -1,0 +1,152 @@
+<html>
+<head>
+      <title>Restaurant login page</title>
+	  <style>
+	  body{
+	  background:#ddd;
+	  }
+	  .heading1{
+	   text-align:center;
+	   color:black;
+	   text-decoration:underline;
+	   text-decoration:italic;
+	   margin-top:20px;
+	    font-family:Kristen ITC;
+	   transition:0.8s;
+	   text-shadow:10px 10px 10px white;
+	   background:lightgrey;
+	   width:40%;
+	   margin-left:28%;
+	   border-radius:200px 80px;
+	    color:white;
+	   background:red;
+	   box-shadow:1px 1px 80px 30px red;
+	  }
+	    #container {
+		   background:grey;
+		   border:4px dotted black;
+		   border-radius:70px 2px;
+		   padding:20px;
+		   margin:100px 30% 10% 30%;
+		   
+			transition:3s;
+		}
+		#container:hover{
+				   box-shadow:5px 10px 60px 10px green inset;
+
+		}
+		#container h1{
+		
+		 text-align:center;
+		 color:white;
+		 text-shadow:1px 1px 30px yellow;
+		  font-family:Kristen ITC;
+		}
+		#container input{
+		margin:10px 0px 0px 100px;
+		float:center;
+		padding:10px;
+		width:300px;
+		font-weight:bold;
+		border-radius:10px;
+		border:none;
+		}
+	    #container input:hover{
+			box-shadow:10px 10px 10px yellow;
+			}
+		.login{
+		background:white;
+		color:black;
+		border-radius:20px;
+		border:none;
+		font-size:20px;
+		margin:20px 0 0 20%;
+		padding:10px;
+		}
+		.login:hover{
+		 background:yellow;
+		 box-shadow:5px 10px 20px black;
+		}
+		a{
+		 margin:30px 0px 0px 20%;
+		 font-weight:bold;
+		 
+		}
+		#showpass{
+          padding:10px;	
+          height:35px;
+          margin:15px 0 0 20px;
+          border-radius:50px;
+          border:none;	
+          transition:.5s;		  
+ 		}
+		#showpass:hover{
+		 box-shadow:1px 1px 20px 5px yellow;
+		}
+	  </style>
+</head>
+<body onload="change_color()"> 
+<h1 class="heading1">KHOWAL RESTOURANT </h1>
+  <div id="container">
+  <h1>Login</h1>
+  <form>
+    <table>
+        <tr>
+           <th><input type="text" id="user" placeholder="Enter Your Username" required /></th>
+		   </tr>
+		 <tr>  
+           <th><input type="password" id="password" placeholder="Enter your password" required /></th>
+		   <th><button type="button" id="showpass" onclick="show(this)">Show</button></th>
+            </tr></table>
+         <div class="btn">
+		  <button class="login" onclick="ln()">Login</button>
+		  <button class="login">Reset</button><br>
+		  <span><a href="#">Click here if you forget your password<a/></span>
+		  <span><a href="E:\HTML_FILES\Restaurant project 2022\file\registration.html" target="_blank">Click for Registration<a/></span>
+		 			</div>
+  
+  <form>
+  </div>
+  
+  
+  <marquee style="width:79%">You can visit directy to the Restaurant site. And check the facility the provided by the RESTOURANT is avaible on site ,SO please visit to Ouer site</marquee>
+  <marquee style="width:79%" direction="right">You can visit directy to the Restaurant site. And check the facility the provided by the RESTOURANT is avaible on site ,SO please visit to Ouer site</marquee>
+
+</body>
+<script>
+var password = document.getElementById("password");
+function show(ele){
+var type = password.getAttribute("type");
+if (type === "password"){
+ password.setAttribute("type","text");
+ ele.innerText = "Hide";
+ }
+ else{
+ password.setAttribute("type","password");
+ ele.innerText = "Show";
+ 
+}
+}
+function ln(){
+   let x = document.getElementById("user").value;
+   let y = document.getElementById("password").value;
+   if(y=="sumit" && x=="sumit")
+   {
+    alert("match found!");
+   }
+   else if(x==""){
+   alert("Username can't be Empty!");
+   }
+   else if(y=="")
+   {
+     alert("Password can't be Empty!");
+   }
+   else
+  alert("Login successful");
+ // window.location ="Homepage.html";
+  
+  
+}
+
+	  </script>
+</html>

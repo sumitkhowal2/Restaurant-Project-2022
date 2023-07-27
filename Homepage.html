@@ -1,0 +1,44 @@
+<html>
+  <head>
+            <title>Homepage</title>
+            <link rel="stylesheet" href="file\homestyle.css">
+            <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+ </head>
+<body background="image\homepage.jpg">
+  
+  <header>
+    <div class="logo">
+      <img src="image/logo.png">
+    </div>
+   <nav>
+    <div id="loginbox">
+      <a href="file\login_page.html" target="_blank" class="login">Login</a>
+      <a href="file\registration.html" target="_blank" class="singup" >Singup</a>
+    </div>
+   <div><button id="st">Toggle</button> </div>
+    
+       <a href="#" class="active">Home</a>
+       <a href="Menu.html">Menu</a>
+       <a href="Offer.html">Offer</a>
+       <a href="Location.html">Location</a>
+       <a href="contact.html">Contact</a> </nav>
+  
+  
+   <div class="title">
+    <marquee>
+      <h1>KHOWAL RESTAURANT</h1>
+    </marquee>
+    <hr>
+   </div>
+  </header>
+  <script>
+    $(document).ready (function(){
+         
+         $('#st').click(function(){
+          $('#loginbox').slideToggle();
+         });
+    });
+
+  </script>
+   </body>
+   </html>
